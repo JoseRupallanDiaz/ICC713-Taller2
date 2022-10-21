@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link href="./css/calculator.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container calculator mt-5">
+        <div class="row">
+            <div class="col results" id="result">
+                0
+            </div>
+        </div>
+        <div class="row">
+            <div class="col current-function" id="current-function">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col button function-button" id="button-add" onclick='setOperator("+")'>
+                +
+            </div>
+            <div class="col button function-button" id="button-subtract" onclick='setOperator("-")'>
+                -
+            </div>
+            <div class="col button function-button" id="button-multiply" onclick='setOperator("x")'>
+                x
+            </div>
+            <div class="col button function-button" id="button-divide" onclick='setOperator("/")'>
+                /
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col button number-button" id="button-7" onclick='setNumber("7")'>
+                        7
+                    </div>
+                    <div class="col button number-button" id="button-8" onclick='setNumber("8")'>
+                        8
+                    </div>
+                    <div class="col button number-button" id="button-9" onclick='setNumber("9")'>
+                        9
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col button number-button" id="button-4" onclick='setNumber("4")'>
+                        4
+                    </div>
+                    <div class="col button number-button" id="button-5" onclick='setNumber("5")'>
+                        5
+                    </div>
+                    <div class="col button number-button" id="button-6" onclick='setNumber("6")'>
+                        6
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col button number-button" id="button-1" onclick='setNumber("1")'>
+                        1
+                    </div>
+                    <div class="col button number-button" id="button-2" onclick='setNumber("2")'>
+                        2
+                    </div>
+                    <div class="col button number-button" id="button-3" onclick='setNumber("3")'>
+                        3
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col button number-button border-down-left" id="button-0" onclick='setNumber("0")'>
+                        0
+                    </div>
+                    <div class="col button number-button" id="button-dot" onclick='setNumber(".")'>
+                        .
+                    </div>
+                    <div class="col button number-button" id="button-c" onclick=clearAll()>
+                        C
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 equals-button border-down-right" id="button-equals" onclick=doOperation()>
+                =
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./js/index.js"></script>
+
+</html>
